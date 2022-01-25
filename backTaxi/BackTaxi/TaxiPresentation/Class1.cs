@@ -1,4 +1,4 @@
-﻿namespace TaxiDb
+﻿namespace TaxiPresentation
 {
     public class Class1
     {

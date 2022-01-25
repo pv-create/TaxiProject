@@ -8,25 +8,13 @@ import { Button } from 'antd';
 const LoginForm:FC = (props:any) => {
 
 
-    const [greetingStatus, displayGreeting] = useState(false);
-    const contentProps = useSpring({
-        opacity: greetingStatus ? 1 : 0,
-        duration:2000000000000000000000000000000000,
-        marginTop: greetingStatus ? 0 : -500
-    });
-
     return (
             <div className="card-body p-5 text-center">
-                <div className="button-container">
-                    <Button style={{visibility: greetingStatus?'hidden':"visible", borderRadius: '20px'}}  onClick={() => displayGreeting(a => !a)} className="button">
-                        да да сюда
-                    </Button>
 
-                </div>
-                {!greetingStatus ? (
+
                     <div className="Intro">Нажмите на кнопку</div>
-                ) : (
-                    <a.div className="mb-md-5 mt-md-4 pb-5-box" style={contentProps}>
+
+                    <a.div className="mb-md-5 mt-md-4 pb-5-box">
 
                         <h2 className="fw-bold mb-2 text-uppercase">Login</h2>
                         <p className="text-white-50 mb-5">Please enter your login and password!</p>
@@ -55,7 +43,7 @@ const LoginForm:FC = (props:any) => {
                         </div>
 
                     </a.div>
-                )}
+
             </div>
     );
 };
