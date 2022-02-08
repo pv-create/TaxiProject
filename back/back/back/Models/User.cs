@@ -1,4 +1,4 @@
-﻿namespace TaxiBack.Models
+﻿namespace back.Models
 {
     public class User
     {
@@ -6,10 +6,9 @@
         public string Name { get; set; } = string.Empty;
         public string TelephonNumber { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
-        public bool IsDriver { get; set; }
+        public List<Purchase> purchases { get; set; }
 
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
-
     }
 }

@@ -5,7 +5,7 @@ import aboutPage from "../Components/Pages/AboutPage/about";
 import OrderPage from "../Components/Pages/OrderPage/orders";
 import HomePage from "../Components/Pages/HomePage/homepage";
 
-export interface IRoute {
+export interface IRoute{
     path:string;
     component:React.ComponentType,
     exact?:boolean,
@@ -31,4 +31,5 @@ export const privateRouts:IRoute[]=[
     {path:routeNames.CITIESPAGE, exact:true, component:citiePage},
     {path:routeNames.ABOUTPAGE, exact:true, component:aboutPage},
     {path:routeNames.ORDER, exact:true, component:OrderPage},
+    {path:routeNames.LOGINPAGE, exact:true, component:Login},
 ]
