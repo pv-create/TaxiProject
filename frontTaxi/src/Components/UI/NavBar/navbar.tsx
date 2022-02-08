@@ -1,13 +1,14 @@
 import React, {FC} from 'react';
 import {Layout} from "antd";
 import { useNavigate } from 'react-router-dom';
+import {useTypeSelector} from "../../../Hooks/useTypeSelector";
 
 const NavBar:FC = () => {
-    let auth:boolean=true;
+    let {isAuth}=useTypeSelector(state=>state.auth)
     return (
         <Layout.Header>
             {
-                auth
+                isAuth
                     ?
                     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                         <div className="container-fluid">
@@ -100,8 +101,6 @@ const NavBar:FC = () => {
                         </div>
                     </nav>
             }
-
-
         </Layout.Header>
     );
 };

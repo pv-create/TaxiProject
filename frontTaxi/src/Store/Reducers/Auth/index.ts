@@ -3,7 +3,7 @@ import {AuthAction, AuthActionenum, AuthState} from "./AuthTypes";
 import {SetAuthAction} from "./AuthTypes";
 
 const initialState:AuthState={
-    isAuth:false,
+    isAuth:true,
 }
 export default function authReducer(state=initialState, action:SetAuthAction):AuthState
 {

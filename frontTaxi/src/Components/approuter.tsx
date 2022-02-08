@@ -5,15 +5,16 @@ import Login from "./Pages/LoginPage/login";
 import {useTransition, animated} from "react-spring";
 import {log} from "util";
 import HomePage from "./Pages/HomePage/homepage";
+import {useTypeSelector} from "../Hooks/useTypeSelector";
 
 const AppRouter = () => {
     let auth:boolean=false;
-
+    let {isAuth}=useTypeSelector(state=>state.auth)
     return (
             <BrowserRouter>
 
                 {
-                    auth ?
+                    isAuth ?
                     //роуты авторизованных пользователей
                     <Routes>
                         {privateRouts.map(route =>
