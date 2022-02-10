@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <Compile Remove="Controllers\AuthController.cs" />
+    <Compile Remove="Controllers\Test.cs" />
+    <Compile Remove="Controllers\WeatherForecastController.cs" />
   </ItemGroup>
 
   <ItemGroup>

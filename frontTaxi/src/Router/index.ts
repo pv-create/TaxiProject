@@ -31,5 +31,5 @@ export const privateRouts:IRoute[]=[
     {path:routeNames.CITIESPAGE, exact:true, component:citiePage},
     {path:routeNames.ABOUTPAGE, exact:true, component:aboutPage},
     {path:routeNames.ORDER, exact:true, component:OrderPage},
-    {path:routeNames.LOGINPAGE, exact:true, component:Login},
+    //{path:routeNames.LOGINPAGE, exact:true, component:Login},
 ]

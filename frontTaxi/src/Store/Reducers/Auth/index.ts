@@ -1,15 +1,22 @@
-import {ReactNode} from "react";
-import {AuthAction, AuthActionenum, AuthState} from "./AuthTypes";
-import {SetAuthAction} from "./AuthTypes";
+import {AuthAction, AuthActionEnum, AuthState, SetAuthAction} from "./AuthTypes";
+import {IUser} from "../../../Models/Models";
 
-const initialState:AuthState={
-    isAuth:true,
+const initialState: AuthState = {
+    isAuth: false,
+    error: '',
+    isLoading: false,
+    user: {} as IUser
 }
-export default function authReducer(state=initialState, action:SetAuthAction):AuthState
-{
-    switch (action.type){
-        case AuthActionenum.SET_AUTH:
-            return {...state, isAuth:action.payload}
+export default function authReducer(state = initialState, action: AuthAction): AuthState {
+    switch (action.type) {
+        case AuthActionEnum.SET_AUTH:
+            return {...state, isAuth: action.payload, isLoading: false}
+        case AuthActionEnum.SET_USER:
+            return {...state, user: action.payload}
+        case AuthActionEnum.SET_ERROR:
+            return {...state, error: action.payload, isLoading: false}
+        case AuthActionEnum.SET_IS_LOADING:
+            return {...state, isLoading: action.payload}
         default:
             return state;
     }

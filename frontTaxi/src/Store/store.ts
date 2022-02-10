@@ -10,4 +10,4 @@ const rootReducer=combineReducers(reducers) //здесь будет пропис
 export  const  store=createStore(rootReducer, applyMiddleware(thunk))//сдесь будет храниться состояние приложения
 
 export type RootState=ReturnType<typeof store.getState>;
-export type AddDispatch=typeof store.dispatch;
+export type AppDispatch = typeof store.dispatch;
